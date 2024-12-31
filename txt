@@ -1,0 +1,43 @@
+17. Axios call in react :
+    - using axios library: install axios : npm i axios
+    - to make a HTTP request using axios: axios(config)
+        - config:is an predifned object with keys:(method,url,data,headers)
+    - HTTP response using axios will always return object with predefined keys (data(server response),status,)
+    -create services folder inside src of your react app
+18. Data sharing between components in react
+    - State Lifting: data sharing is using props. we will create state in common parent of data to be shared components. share state updation function one component and state to another component
+
+--------------------------------------------------------
+                    JSON server creation
+--------------------------------------------------------
+1. create a server folder to store json file.
+2. create a package.json (npm configuration file) file inside server folder: use command:
+                 npm init -y
+3. install json-server package in server folder to run json file, use command to install json-server :
+                 npm i json-server
+4. create json (db.json) file for storing project data 
+5. to run json file and available in browser port use command in server folder: 
+                npx json-server db.json
+    stable version of json server :npm i json-server@0.17.4
+
+
+
+API call using Axios libraries:
+    - Axios is a promise based http client for node.js and the browser
+
+
+-------------------------------------------------------------------------------------------------------------------
+                                        JSONSERVER DEPOLYMENT
+-------------------------------------------------------------------------------------------------------------------
+1. Create a index.js file inside server folder
+2. Update scripts key of package.json file will start with {"start":"node index.js"} and remove test key from it
+3. Create .gitignore file, to node-modules inside it
+4. define steps to run db.json file using json-server in index.js
+    - import json-server
+    - create a server for mediaplayer app in order to run our server app
+    - create a middleware to conver json data to js
+    - create a port for executing our app
+    - setup a path/route db.json file so that client can make request
+    - use the middleware,route inside the server
+    - run the server using given port
+    - to excute our app we have to use : node index.js in terminal, so that we can see the output in localhost:3000
